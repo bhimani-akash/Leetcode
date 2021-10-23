@@ -21,13 +21,13 @@ public class LinkedList {
 
     public void display() {
         Link current = first;
-        System.out.println("[ ");
-        while (current.next != null) {
+        System.out.print("[ ");
+        while (current != null) {
             current.display();
             current = current.next;
-            System.out.println(" ");
+            System.out.print(" ");
         }
-        System.out.println(" ]");
+        System.out.println("]");
     }
 
     public Link find(int key) {
@@ -71,5 +71,64 @@ public class LinkedList {
         for (Link current = first; current != null; current = current.next)
             length++;
         return length;
+    }
+
+    public void sort() {
+        int i, j, tempKey, tempData;
+        boolean swapped;
+        Link current,next;
+        int size = length();
+
+        for (i = 0; i < size - 1; i++) {
+            swapped = false;
+            current = first;
+            next = first.next;
+            for (j = 0; j < size-i-1; j++) {
+                if (current.data > next.data) {
+                    swapped = true;
+                    tempData = current.data;
+                    current.data = next.data;
+                    next.data = tempData;
+
+                    tempKey = current.key;
+                    current.key = next.key;
+                    next.key = tempKey;
+                }
+                current = current.next;
+                next = next.next;
+            }
+
+            if (!swapped) break;
+        }
+    }
+
+    public LinkedList reverse() {
+        LinkedList reverseList = new LinkedList();
+        Link nextLink;
+        reverseList.insertFirst(first.key, first.data);
+
+        Link currentLink = first;
+
+        while (currentLink.next != null) {
+            nextLink = currentLink.next;
+            reverseList.insertFirst(nextLink.key, nextLink.data);
+            currentLink = currentLink.next;
+        }
+        return reverseList;
+    }
+
+    public void concatenate(LinkedList list) {
+        if (first == null) {
+            first = list.first;
+        }
+        if (list.first == null) {
+            return;
+        }
+
+        Link temp = first;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = list.first;
     }
 }

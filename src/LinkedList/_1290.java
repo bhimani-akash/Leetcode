@@ -24,7 +24,7 @@ Output: 18880
 Example 5:
 Input: head = [0,0]
 Output: 0
-*/
+ */
 
 package LinkedList;
 

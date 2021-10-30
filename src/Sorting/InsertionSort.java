@@ -1,4 +1,4 @@
-package Sorting.InsertionSort;
+package Sorting;
 
 public class InsertionSort {
     void sort(int[] arr, int n)

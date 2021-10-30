@@ -1,16 +1,24 @@
-package BubbleSort;
+package Sorting.BubbleSort;
 
-public class BubbleSort {
+public class OptimizedBubbleSort {
 
     void bubbleSort(int[] arr, int n) {
-        for (int i = 0; i < n-1; i++) {
-            for (int j = 0; j < n-i-1; j++) {
+        int i, j, temp;
+        boolean swapped;
+
+        for (i = 0; i < n-1; i++) {
+            swapped = false;
+
+            for (j = 0; j < n-i-1; j++) {
                 if (arr[j] > arr[j+1]) {
-                    int temp = arr[j];
+                    swapped = true;
+                    temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
                 }
             }
+
+            if (!swapped) break;
         }
     }
 
@@ -24,7 +32,7 @@ public class BubbleSort {
         int[] arr = {100, 123, 252, 127, 212, 101, 900};
         int n = arr.length;
 
-        BubbleSort sort = new BubbleSort();
+        OptimizedBubbleSort sort = new OptimizedBubbleSort();
         sort.bubbleSort(arr, n);
         System.out.println("Sorted Array : ");
         sort.displayArray(arr, n);

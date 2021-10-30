@@ -20,21 +20,21 @@ The list is guaranteed to be sorted in ascending order.
 package LinkedList;
 
 public class _83 {
-    public ListNode deleteDuplicates(ListNode head) {
-        ListNode linkedList = head;
-
-        while(linkedList != null) {
-
-            if (linkedList.next == null) {
-                break;
-            }
-
-            if (linkedList.val == linkedList.next.val) {
-                linkedList.next = linkedList.next.next;
-            } else {
-                linkedList = linkedList.next;
-            }
-        }
-        return head;
-    }
+//    public ListNode deleteDuplicates(ListNode head) {
+//        ListNode linkedList = head;
+//
+//        while(linkedList != null) {
+//
+//            if (linkedList.next == null) {
+//                break;
+//            }
+//
+//            if (linkedList.val == linkedList.next.val) {
+//                linkedList.next = linkedList.next.next;
+//            } else {
+//                linkedList = linkedList.next;
+//            }
+//        }
+//        return head;
+//    }
 }

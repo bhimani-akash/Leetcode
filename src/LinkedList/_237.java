@@ -35,8 +35,8 @@ The node to be deleted is in the list and is not a tail node
 package LinkedList;
 
 public class _237 {
-    public void deleteNode(ListNode node) {
-        node.val = node.next.val;
-        node.next = node.next.next;
-    }
+//    public void deleteNode(ListNode node) {
+//        node.val = node.next.val;
+//        node.next = node.next.next;
+//    }
 }

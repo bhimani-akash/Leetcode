@@ -23,20 +23,20 @@ The number of nodes in the list is in the range [0, 104].
 package LinkedList;
 
 public class _203 {
-    public ListNode removeElements(ListNode head, int val) {
-        if (head == null) return head;
-
-        ListNode list = head;
-
-        while (list.next != null) {
-            if (list.next.val == val)
-                list.next = list.next.next;
-            else
-                list = list.next;
-        }
-
-        if (head.val == val) return head.next;
-
-        return head;
-    }
+//    public ListNode removeElements(ListNode head, int val) {
+//        if (head == null) return head;
+//
+//        ListNode list = head;
+//
+//        while (list.next != null) {
+//            if (list.next.val == val)
+//                list.next = list.next.next;
+//            else
+//                list = list.next;
+//        }
+//
+//        if (head.val == val) return head.next;
+//
+//        return head;
+//    }
 }

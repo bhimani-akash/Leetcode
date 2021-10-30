@@ -35,14 +35,14 @@ Each node's value is either 0 or 1.
 package LinkedList;
 
 public class _1290 {
-    public int getDecimalValue(ListNode head) {
-        int result = 0;
-
-        while (head != null) {
-            result = 2 * result + head.val;
-            head = head.next;
-        }
-
-        return result;
-    }
+//    public int getDecimalValue(ListNode head) {
+//        int result = 0;
+//
+//        while (head != null) {
+//            result = 2 * result + head.val;
+//            head = head.next;
+//        }
+//
+//        return result;
+//    }
 }

@@ -17,21 +17,21 @@ The number of nodes in the list is in the range [1, 105].
 package LinkedList;
 
 public class _234 {
-    public boolean isPalindrome(ListNode head) {
-        Stack<ListNode> reverse = new Stack<ListNode>();
-        ListNode temp = head;
-
-        while(temp != null){
-            reverse.push(temp);
-            temp = temp.next;
-        }
-
-        while(head !=null && !reverse.isEmpty()){
-
-            if(reverse.pop().val != head.val) return false;
-            else head = head.next;
-
-        }
-        return true;
-    }
+//    public boolean isPalindrome(ListNode head) {
+//        Stack<ListNode> reverse = new Stack<ListNode>();
+//        ListNode temp = head;
+//
+//        while(temp != null){
+//            reverse.push(temp);
+//            temp = temp.next;
+//        }
+//
+//        while(head !=null && !reverse.isEmpty()){
+//
+//            if(reverse.pop().val != head.val) return false;
+//            else head = head.next;
+//
+//        }
+//        return true;
+//    }
 }

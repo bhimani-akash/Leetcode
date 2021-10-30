@@ -24,37 +24,37 @@ The number of nodes in the list is in the range [1, 5000].
 package LinkedList;
 
 public class _147 {
-    public ListNode insertionSortList(ListNode head) {
-        ListNode prev = head;
-        ListNode curr = head.next;
-
-        if (head == null || head.next == null)
-            return head;
-
-        while (curr != null) {
-            if (curr.val < prev.val) {
-                prev.next = curr.next;
-
-                if (curr.val <= head.val) {
-                    curr.next = head;
-                    head = curr;
-                } else {
-                    ListNode ptr = head;
-                    while (ptr.next != null && ptr.next.val < curr.val)
-                        ptr = ptr.next;
-
-                    ListNode temp = ptr.next;
-                    ptr.next = curr;
-                    curr.next = temp;
-                }
-
-                curr = prev.next;
-            } else {
-                curr = curr.next;
-                prev = prev.next;
-            }
-        }
-
-        return head;
-    }
+//    public ListNode insertionSortList(ListNode head) {
+//        ListNode prev = head;
+//        ListNode curr = head.next;
+//
+//        if (head == null || head.next == null)
+//            return head;
+//
+//        while (curr != null) {
+//            if (curr.val < prev.val) {
+//                prev.next = curr.next;
+//
+//                if (curr.val <= head.val) {
+//                    curr.next = head;
+//                    head = curr;
+//                } else {
+//                    ListNode ptr = head;
+//                    while (ptr.next != null && ptr.next.val < curr.val)
+//                        ptr = ptr.next;
+//
+//                    ListNode temp = ptr.next;
+//                    ptr.next = curr;
+//                    curr.next = temp;
+//                }
+//
+//                curr = prev.next;
+//            } else {
+//                curr = curr.next;
+//                prev = prev.next;
+//            }
+//        }
+//
+//        return head;
+//    }
 }

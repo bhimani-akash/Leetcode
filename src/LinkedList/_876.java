@@ -20,22 +20,22 @@ The number of nodes in the list is in the range [1, 100].
 package LinkedList;
 
 public class _876 {
-    public ListNode middleNode(ListNode head) {
-        ListNode current = head;
-        int length = 0;
-
-        while(current != null){
-            length++;
-            current = current.next;
-        }
-
-        length = length / 2;
-
-        ListNode newCurrent = head;
-        for(int i = 0; i < length; i++){
-            newCurrent = newCurrent.next;
-        }
-
-        return newCurrent;
-    }
+//    public ListNode middleNode(ListNode head) {
+//        ListNode current = head;
+//        int length = 0;
+//
+//        while(current != null){
+//            length++;
+//            current = current.next;
+//        }
+//
+//        length = length / 2;
+//
+//        ListNode newCurrent = head;
+//        for(int i = 0; i < length; i++){
+//            newCurrent = newCurrent.next;
+//        }
+//
+//        return newCurrent;
+//    }
 }

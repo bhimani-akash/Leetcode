@@ -40,34 +40,34 @@ At most 5000 calls will be made to visit, back, and forward.
 package Array;
 
 public class _1472 {
-    private List<String> browserHistory;
-    private int index;
-    private int end;
-
-    public BrowserHistory(String homepage) {
-        browserHistory = new ArrayList();
-        browserHistory.add(homepage);
-        index = 0;
-        end = 0;
-    }
-
-    public void visit(String url) {
-        index++;
-        if(index < browserHistory.size()){
-            browserHistory.set(index, url);
-        }else{
-            browserHistory.add(url);
-        }
-        end = index;
-    }
-
-    public String back(int steps) {
-        index = Math.max(index - steps, 0);
-        return browserHistory.get(index);
-    }
-
-    public String forward(int steps) {
-        index = Math.min(index + steps, end);
-        return browserHistory.get(index);
-    }
+//    private List<String> browserHistory;
+//    private int index;
+//    private int end;
+//
+//    public BrowserHistory(String homepage) {
+//        browserHistory = new ArrayList();
+//        browserHistory.add(homepage);
+//        index = 0;
+//        end = 0;
+//    }
+//
+//    public void visit(String url) {
+//        index++;
+//        if(index < browserHistory.size()){
+//            browserHistory.set(index, url);
+//        }else{
+//            browserHistory.add(url);
+//        }
+//        end = index;
+//    }
+//
+//    public String back(int steps) {
+//        index = Math.max(index - steps, 0);
+//        return browserHistory.get(index);
+//    }
+//
+//    public String forward(int steps) {
+//        index = Math.min(index + steps, end);
+//        return browserHistory.get(index);
+//    }
 }

@@ -31,26 +31,26 @@ The number of nodes in the list is n.
 package LinkedList;
 
 public class _1721 {
-    public ListNode swapNodes(ListNode head, int k) {
-        ListNode list1 = head;
-        ListNode list2 = head;
-        ListNode nodeK;
-
-        for (int i = 1; i < k; i++)
-            list1 = list1.next;
-
-        nodeK = list1;
-        list1 = list1.next;
-
-        while (list1 != null) {
-            list1 = list1.next;
-            list2 = list2.next;
-        }
-
-        int temp = nodeK.val;
-        nodeK.val = list2.val;
-        list2.val = temp;
-
-        return head;
-    }
+//    public ListNode swapNodes(ListNode head, int k) {
+//        ListNode list1 = head;
+//        ListNode list2 = head;
+//        ListNode nodeK;
+//
+//        for (int i = 1; i < k; i++)
+//            list1 = list1.next;
+//
+//        nodeK = list1;
+//        list1 = list1.next;
+//
+//        while (list1 != null) {
+//            list1 = list1.next;
+//            list2 = list2.next;
+//        }
+//
+//        int temp = nodeK.val;
+//        nodeK.val = list2.val;
+//        list2.val = temp;
+//
+//        return head;
+//    }
 }

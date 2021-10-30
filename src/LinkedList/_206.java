@@ -21,16 +21,16 @@ The number of nodes in the list is the range [0, 5000].
 package LinkedList;
 
 public class _206 {
-    public ListNode reverseList(ListNode head) {
-        ListNode newHead = null;
-
-        while (head != null) {
-            ListNode next = head.next;
-            head.next = newHead;
-            newHead = head;
-            head = next;
-        }
-
-        return newHead;
-    }
+//    public ListNode reverseList(ListNode head) {
+//        ListNode newHead = null;
+//
+//        while (head != null) {
+//            ListNode next = head.next;
+//            head.next = newHead;
+//            newHead = head;
+//            head = next;
+//        }
+//
+//        return newHead;
+//    }
 }

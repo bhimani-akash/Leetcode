@@ -1,16 +1,18 @@
 package Sorting;
 
-public class InsertionSort {
-    void sort(int[] arr, int n) {
-        for (int i = 1; i < n; ++i) {
-            int key = arr[i];
-            int j = i - 1;
+public class ShellSort {
 
-            while (j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
-                j = j - 1;
+    void sort(int[] arr, int n) {
+        for (int gap = n/2; gap > 0; gap /= 2) {
+            for (int i = gap; i < n; i++) {
+                int temp = arr[i];
+                int j;
+
+                for (j = i; j >= gap && arr[j-gap] > temp; j -= gap)
+                    arr[j] = arr[j - gap];
+
+                arr[j] = temp;
             }
-            arr[j + 1] = key;
         }
     }
 
@@ -24,13 +26,12 @@ public class InsertionSort {
         int n = arr.length;
 
         System.out.println("Array before sorting");
-        printArray(arr,n);
+        printArray(arr, n);
 
-        InsertionSort insertion = new InsertionSort();
-        insertion.sort(arr,n);
+        ShellSort shell = new ShellSort();
+        shell.sort(arr,n);
 
         System.out.println("\n\nArray after sorting");
         printArray(arr,n);
     }
 }
-

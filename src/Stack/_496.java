@@ -33,24 +33,24 @@ package Stack;
 import java.util.HashMap;
 
 public class _496 {
-    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-        int[] ans = new int[nums1.length];
-        HashMap<Integer, Integer> hm = new HashMap<>();
-        Stack<Integer> st = new Stack<>();
-        int j = 0;
-
-        while (j < nums2.length) {
-            while ((!st.isEmpty()) && (nums2[j] > st.peek())) {
-                hm.put(st.pop(), nums2[j]);
-            }
-            st.push(nums2[j]);
-            ++j;
-        }
-
-        for(int i = 0; i < nums1.length; ++i) {
-            ans[i] = hm.getOrDefault(nums1[i], -1);
-        }
-
-        return ans;
-    }
+//    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+//        int[] ans = new int[nums1.length];
+//        HashMap<Integer, Integer> hm = new HashMap<>();
+//        Stack<Integer> st = new Stack<>();
+//        int j = 0;
+//
+//        while (j < nums2.length) {
+//            while ((!st.isEmpty()) && (nums2[j] > st.peek())) {
+//                hm.put(st.pop(), nums2[j]);
+//            }
+//            st.push(nums2[j]);
+//            ++j;
+//        }
+//
+//        for(int i = 0; i < nums1.length; ++i) {
+//            ans[i] = hm.getOrDefault(nums1[i], -1);
+//        }
+//
+//        return ans;
+//    }
 }

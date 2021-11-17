@@ -23,22 +23,22 @@ Constraints:
 package Stack;
 
 public class _503 {
-    public int[] nextGreaterElements(int[] nums) {
-        Stack<Integer> st = new Stack<>();
-
-        for (int i = nums.length - 1; i >= 0; i--) {
-            st.push(nums[i]);
-        }
-
-        int[] greater = new int[nums.length];
-        for (int i = nums.length - 1; i >= 0; i--) {
-            while (!st.isEmpty() && st.peek() <= nums[i])
-                st.pop();
-
-            greater[i] = st.empty() ? -1 : st.peek();
-            st.push(nums[i]);
-        }
-
-        return greater;
-    }
+//    public int[] nextGreaterElements(int[] nums) {
+//        Stack<Integer> st = new Stack<>();
+//
+//        for (int i = nums.length - 1; i >= 0; i--) {
+//            st.push(nums[i]);
+//        }
+//
+//        int[] greater = new int[nums.length];
+//        for (int i = nums.length - 1; i >= 0; i--) {
+//            while (!st.isEmpty() && st.peek() <= nums[i])
+//                st.pop();
+//
+//            greater[i] = st.empty() ? -1 : st.peek();
+//            st.push(nums[i]);
+//        }
+//
+//        return greater;
+//    }
 }

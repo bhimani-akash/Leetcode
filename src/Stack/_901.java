@@ -35,21 +35,21 @@ At most 104 calls will be made to next.
 package Stack;
 
 public class _901 {
-    class StockSpanner {
-        Stack<int[]> stack;
-
-        public StockSpanner() {
-            stack = new Stack<>();
-        }
-
-        public int next(int price) {
-            int span = 1;
-            while (!stack.isEmpty() && stack.peek()[0] <= price) {
-                span += stack.pop()[1];
-            }
-
-            stack.add(new int[]{price, span});
-            return span;
-        }
-    }
+//    class StockSpanner {
+//        Stack<int[]> stack;
+//
+//        public StockSpanner() {
+//            stack = new Stack<>();
+//        }
+//
+//        public int next(int price) {
+//            int span = 1;
+//            while (!stack.isEmpty() && stack.peek()[0] <= price) {
+//                span += stack.pop()[1];
+//            }
+//
+//            stack.add(new int[]{price, span});
+//            return span;
+//        }
+//    }
 }

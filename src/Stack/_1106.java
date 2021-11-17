@@ -31,40 +31,40 @@ expression is a valid expression representing a boolean, as given in the descrip
 package Stack;
 
 public class _1106 {
-    public boolean parseBoolExpr(String expression) {
-        Stack<Character> st = new Stack();
-
-        for (int i = 0; i < expression.length; i++) {
-            char ch = expression.charAt(i);
-
-            if (ch == ')') {
-                boolean hasTrue = false;
-                boolean hasFalse = false;
-
-                while (st.peek() != '(') {
-                    char next = st.pop();
-
-                    if (next == 't')
-                        hasTrue = true;
-                    else
-                        hasFalse = true;
-                }
-
-                st.pop();
-                char operation = st.pop();
-
-                if (operation == '&') {
-                    st.push(hasFalse ? 'f' : 't');
-                } else if (operation == '|') {
-                    st.push(hasTrue ? 't' : 'f');
-                } else {
-                    st.push(hasTrue ? 'f' : 't');
-                }
-            } else if (ch != ',') {
-                st.push(ch);
-            }
-        }
-
-        return st.pop() == 't';
-    }
+//    public boolean parseBoolExpr(String expression) {
+//        Stack<Character> st = new Stack();
+//
+//        for (int i = 0; i < expression.length; i++) {
+//            char ch = expression.charAt(i);
+//
+//            if (ch == ')') {
+//                boolean hasTrue = false;
+//                boolean hasFalse = false;
+//
+//                while (st.peek() != '(') {
+//                    char next = st.pop();
+//
+//                    if (next == 't')
+//                        hasTrue = true;
+//                    else
+//                        hasFalse = true;
+//                }
+//
+//                st.pop();
+//                char operation = st.pop();
+//
+//                if (operation == '&') {
+//                    st.push(hasFalse ? 'f' : 't');
+//                } else if (operation == '|') {
+//                    st.push(hasTrue ? 't' : 'f');
+//                } else {
+//                    st.push(hasTrue ? 'f' : 't');
+//                }
+//            } else if (ch != ',') {
+//                st.push(ch);
+//            }
+//        }
+//
+//        return st.pop() == 't';
+//    }
 }

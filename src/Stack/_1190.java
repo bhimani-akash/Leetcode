@@ -30,22 +30,22 @@ It's guaranteed that all parentheses are balanced.
 package Stack;
 
 public class _1190 {
-    public String reverseParentheses(String s) {
-        Stack<String> stack = new Stack();
-        StringBuilder sb = new StringBuilder();
-
-        for (char c : s.toCharArray()) {
-            if (c =='(') {
-                stack.push(sb.toString());
-                sb = new StringBuilder();
-            } else if(c ==')') {
-                sb = sb.reverse();
-                sb.insert(0,stack.pop());
-            } else {
-                sb.append(c);
-            }
-        }
-
-        return sb.toString();
-    }
+//    public String reverseParentheses(String s) {
+//        Stack<String> stack = new Stack();
+//        StringBuilder sb = new StringBuilder();
+//
+//        for (char c : s.toCharArray()) {
+//            if (c =='(') {
+//                stack.push(sb.toString());
+//                sb = new StringBuilder();
+//            } else if(c ==')') {
+//                sb = sb.reverse();
+//                sb.insert(0,stack.pop());
+//            } else {
+//                sb.append(c);
+//            }
+//        }
+//
+//        return sb.toString();
+//    }
 }

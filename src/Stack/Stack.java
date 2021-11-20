@@ -33,6 +33,4 @@ public class Stack {
     public int peek() {
         return intArray[top];
     }
-
-
 }

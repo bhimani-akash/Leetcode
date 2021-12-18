@@ -23,7 +23,7 @@ package Tree;
 import javax.swing.tree.TreeNode;
 
 public class _938 {
-    public int rangeSumBST(TreeNode root, int low, int high) {
+//    public int rangeSumBST(TreeNode root, int low, int high) {
 //        if (root == null)
 //            return 0;
 //
@@ -38,5 +38,5 @@ public class _938 {
 //            sum += rangeSumBST(root.right, low, high);
 //
 //        return sum;
-    }
+//    }
 }

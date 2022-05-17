@@ -21,31 +21,33 @@ package Array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class _56 {
     public int[][] merge(int[][] intervals) {
-        Arrays.sort(intervals,(o1, o2) -> Integer.compare(o1[0], o2[0]));
-        List<int[]> ansList = new ArrayList<>();
+        List<int[]> res = new ArrayList<>();
+
+        if (intervals.length == 0)
+            return res.toArray(new int[0][]);
+
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
+
         int start = intervals[0][0];
         int end = intervals[0][1];
-        int s, e;
-        int i = 0;
 
-        while (i < intervals.length) {
-            s = intervals[i][0];
-            e = intervals[i][1];
-
-            if (s <= end)
-                end = Math.max(end,e);
-            else {
-                ansList.add(new int[]{start,end});
-                start = s;
-                end =  e;
+        for (int[] i : intervals) {
+            if (i[0] <= end) {
+                end = Math.max(end, i[1]);
+            } else {
+                res.add(new int[]{start, end});
+                start = i[0];
+                end = i[1];
             }
-            i++;
         }
-        ansList.add(new int[] {start, end});
-        return ansList.toArray(new int[ansList.size()][]);
+
+        res.add(new int[]{start, end});
+
+        return res.toArray(new int[0][]);
     }
 }

@@ -29,7 +29,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class _797 {
-    public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
+//    public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
 //        List<List<Integer>> result = new ArrayList<>();
 //        Queue<List<Integer>> queue = new LinkedList<>();
 //        queue.add(Arrays.asList(0));
@@ -53,5 +53,5 @@ public class _797 {
 //        }
 //
 //        return result;
-    }
+//    }
 }
